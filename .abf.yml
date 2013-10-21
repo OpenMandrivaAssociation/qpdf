@@ -1,3 +1,4 @@
----
-sources:
+removed_sources:
   qpdf-3.0.2.tar.gz: 0cab59b27c9adf4067ffc002db1d9262e219c364
+sources:
+  qpdf-5.0.1.tar.gz: 41a4bd91bfbc2d3585ea229b53bfd1183186b1b3
