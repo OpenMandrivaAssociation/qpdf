@@ -1,17 +1,17 @@
 %define major 13
 %define libname %mklibname qpdf %{major}
-%define develname %mklibname qpdf -d
+%define devname %mklibname qpdf -d
 
-Name:		qpdf
 Summary:	Inspect and manipulate PDF files
+Name:		qpdf
 Version:	5.0.1
 Release:	1
 Group:		Office
 License:	Artistic
-URL:		http://sourceforge.net/projects/qpdf/
+Url:		http://sourceforge.net/projects/qpdf/
 Source0:	http://downloads.sourceforge.net/project/qpdf/qpdf/%{version}/%{name}-%{version}.tar.gz
-BuildRequires:	zlib-devel
-BuildRequires:	pcre-devel
+BuildRequires:	pkgconfig(libpcre)
+BuildRequires:	pkgconfig(zlib)
 
 %description
 QPDF is a C++ library and set of programs that inspect and manipulate
@@ -29,15 +29,14 @@ the structure of PDF files. It can encrypt and linearize files, expose
 the internals of a PDF file, and do many other operations useful to end
 users and PDF developers.
 
-%package -n	%{develname}
-Summary:	Static library and header files for the qpdf library
+%package -n	%{devname}
+Summary:	Development library and header files for the qpdf library
 Group:		Development/C
 Requires:	%{libname} = %{version}-%{release}
 Requires:	%{name} = %{version}-%{release}
-Provides:	qpdf-devel = %{version}-%{release}
 Provides:	%{name}-devel = %{version}-%{release}
 
-%description -n %{develname}
+%description -n %{devname}
 Devel package for %{name}
 
 %prep
@@ -59,12 +58,12 @@ Devel package for %{name}
 %{_mandir}/man1/qpdf.1.*
 %{_mandir}/man1/zlib-flate.1.*
 
-%files -n %{develname}
+%files -n %{libname}
+%{_libdir}/libqpdf.so.%{major}*
+
+%files -n %{devname}
 %{_includedir}/%{name}/*.h
 %{_includedir}/%{name}/*.hh
 %{_libdir}/libqpdf.so
 %{_libdir}/pkgconfig/libqpdf.pc
-
-%files -n %{libname}
-%{_libdir}/libqpdf.so.%{major}*
 
