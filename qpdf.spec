@@ -4,12 +4,12 @@
 
 Summary:	Inspect and manipulate PDF files
 Name:		qpdf
-Version:	5.0.1
-Release:	7
+Version:	5.1.2
+Release:	1
 Group:		Office
 License:	Artistic
 Url:		http://sourceforge.net/projects/qpdf/
-Source0:	http://downloads.sourceforge.net/project/qpdf/qpdf/%{version}/%{name}-%{version}.tar.gz
+Source0:	http://sourceforge.net/projects/qpdf/files/qpdf/5.1.2/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	pkgconfig(zlib)
 
@@ -66,4 +66,3 @@ Devel package for %{name}
 %{_includedir}/%{name}/*.hh
 %{_libdir}/libqpdf.so
 %{_libdir}/pkgconfig/libqpdf.pc
-
