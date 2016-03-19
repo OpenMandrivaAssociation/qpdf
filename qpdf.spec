@@ -5,7 +5,7 @@
 Summary:	Inspect and manipulate PDF files
 Name:		qpdf
 Version:	5.1.2
-Release:	3
+Release:	4
 Group:		Office
 License:	Artistic
 Url:		http://sourceforge.net/projects/qpdf/
