@@ -1,15 +1,15 @@
-%define major 13
+%define major 17
 %define libname %mklibname qpdf %{major}
 %define devname %mklibname qpdf -d
 
 Summary:	Inspect and manipulate PDF files
 Name:		qpdf
-Version:	5.1.2
-Release:	6
+Version:	6.0.0
+Release:	1
 Group:		Office
 License:	Artistic
 Url:		http://sourceforge.net/projects/qpdf/
-Source0:	http://sourceforge.net/projects/qpdf/files/qpdf/5.1.2/%{name}-%{version}.tar.gz
+Source0:	http://sourceforge.net/projects/qpdf/files/qpdf/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	pkgconfig(zlib)
 
