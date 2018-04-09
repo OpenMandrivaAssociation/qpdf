@@ -1,10 +1,10 @@
-%define major 18
+%define major 21
 %define libname %mklibname qpdf %{major}
 %define devname %mklibname qpdf -d
 
 Summary:	Inspect and manipulate PDF files
 Name:		qpdf
-Version:	7.1.1
+Version:	8.0.2
 Release:	1
 Group:		Office
 License:	Artistic
@@ -62,6 +62,7 @@ Devel package for %{name}
 %{_libdir}/libqpdf.so.%{major}*
 
 %files -n %{devname}
+%doc %{_docdir}/qpdf
 %{_includedir}/%{name}/*.h
 %{_includedir}/%{name}/*.hh
 %{_libdir}/libqpdf.so
