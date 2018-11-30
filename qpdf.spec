@@ -63,7 +63,6 @@ Devel package for %{name}
 %{_libdir}/libqpdf.so.%{major}*
 
 %files -n %{devname}
-%doc %{_docdir}/qpdf
 %{_includedir}/%{name}/*.h
 %{_includedir}/%{name}/*.hh
 %{_libdir}/libqpdf.so
