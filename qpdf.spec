@@ -1,10 +1,10 @@
-%define major 26
+%define major 28
 %define libname %mklibname qpdf %{major}
 %define devname %mklibname qpdf -d
 
 Summary:	Inspect and manipulate PDF files
 Name:		qpdf
-Version:	9.1.1
+Version:	10.0.1
 Release:	1
 Group:		Office
 License:	Artistic
