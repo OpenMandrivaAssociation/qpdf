@@ -13,6 +13,10 @@ Source0:	http://sourceforge.net/projects/qpdf/files/qpdf/%{version}/%{name}-%{ve
 BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libjpeg)
+BuildRequires:	pkgconfig(gnutls)
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 
 %description
 QPDF is a C++ library and set of programs that inspect and manipulate
