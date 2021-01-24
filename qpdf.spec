@@ -50,6 +50,8 @@ Devel package for %{name}
 %install
 %make_install
 
+rm -f %{buildroot}%{_libdir}/libqpdf.la
+
 %files
 %doc Artistic-2.0 ChangeLog README* TODO
 %{_bindir}/fix-qdf
