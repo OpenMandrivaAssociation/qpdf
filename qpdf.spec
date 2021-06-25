@@ -4,7 +4,7 @@
 
 Summary:	Inspect and manipulate PDF files
 Name:		qpdf
-Version:	10.0.1
+Version:	10.3.2
 Release:	1
 Group:		Office
 License:	Artistic
@@ -41,14 +41,19 @@ Provides:	%{name}-devel = %{version}-%{release}
 Devel package for %{name}
 
 %prep
-%setup -q
+%autosetup -p1
+# autoconf-ish, but not using automake
+# and doing weird stuff with libtool
+./configure \
+	--prefix=%{_prefix} \
+	--libdir=%{_libdir} \
+	--disable-static
 
 %build
-%configure --disable-static
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Artistic-2.0 ChangeLog README* TODO
