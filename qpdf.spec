@@ -1,10 +1,10 @@
-%define major 28
-%define libname %mklibname qpdf %{major}
+%define major 29
+%define libname %mklibname qpdf
 %define devname %mklibname qpdf -d
 
 Summary:	Inspect and manipulate PDF files
 Name:		qpdf
-Version:	10.6.3
+Version:	11.1.0
 Release:	1
 Group:		Office
 License:	Artistic
@@ -13,6 +13,7 @@ Source0:	http://sourceforge.net/projects/qpdf/files/qpdf/%{version}/%{name}-%{ve
 BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	pkgconfig(libjpeg)
+BuildRequires:	cmake ninja
 
 %description
 QPDF is a C++ library and set of programs that inspect and manipulate
@@ -42,18 +43,13 @@ Devel package for %{name}
 
 %prep
 %autosetup -p1
-# autoconf-ish, but not using automake
-# and doing weird stuff with libtool
-./configure \
-	--prefix=%{_prefix} \
-	--libdir=%{_libdir} \
-	--disable-static
+%cmake -G Ninja
 
 %build
-%make_build
+%ninja_build -C build
 
 %install
-%make_install
+%ninja_install -C build
 
 %files
 %doc Artistic-2.0 ChangeLog README* TODO
@@ -73,3 +69,4 @@ Devel package for %{name}
 %{_includedir}/%{name}/*.hh
 %{_libdir}/libqpdf.so
 %{_libdir}/pkgconfig/libqpdf.pc
+%{_libdir}/cmake/qpdf
