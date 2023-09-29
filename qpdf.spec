@@ -4,7 +4,7 @@
 
 Summary:	Inspect and manipulate PDF files
 Name:		qpdf
-Version:	11.4.0
+Version:	11.6.1
 Release:	1
 Group:		Office
 License:	Artistic
@@ -52,7 +52,7 @@ Devel package for %{name}
 %ninja_install -C build
 
 %files
-%doc Artistic-2.0 ChangeLog README* TODO
+%doc Artistic-2.0 ChangeLog README*
 %{_bindir}/fix-qdf
 %{_bindir}/%{name}
 %{_bindir}/zlib-flate
