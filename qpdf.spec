@@ -4,7 +4,7 @@
 
 Summary:	Inspect and manipulate PDF files
 Name:		qpdf
-Version:	11.6.3
+Version:	11.6.4
 Release:	1
 Group:		Office
 License:	Artistic
