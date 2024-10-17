@@ -8,7 +8,7 @@ Version:	11.9.1
 Release:	1
 Group:		Office
 License:	Artistic
-Url:		http://sourceforge.net/projects/qpdf/
+Url:		https://sourceforge.net/projects/qpdf/
 Source0:	http://sourceforge.net/projects/qpdf/files/qpdf/%{version}/%{name}-%{version}.tar.gz
 BuildRequires:	pkgconfig(libpcre)
 BuildRequires:	pkgconfig(zlib)
